@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keranjang</title>
+    <link href="/src/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-800 min-h-screen">
+    <main class="max-w-screen-lg mx-auto px-4 py-10">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+        <h1 class="text-3xl font-bold text-white">Keranjang</h1>
+        <a
+          href="./produk.html"
+          class="inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+          >Kembali ke Produk</a
+        >
+      </div>
+
+      <section
+        class="bg-neutral-secondary-medium border border-default rounded-base p-5"
+      >
+        <div id="cart-items" class="space-y-4"></div>
+        <div
+          class="mt-6 pt-4 border-t border-default-medium flex flex-wrap items-center justify-between gap-3"
+        >
+          <p class="text-lg font-semibold text-heading">
+            Total: <span id="cart-total">Rp0</span>
+          </p>
+          <div class="flex items-center gap-3">
+            <button
+              id="clear-cart"
+              type="button"
+              class="inline-flex items-center text-white bg-gray-500 hover:bg-gray-600 focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+            >
+              Kosongkan Keranjang
+            </button>
+            <button
+              id="checkout"
+              type="button"
+              class="inline-flex items-center text-white bg-gray-500 hover:bg-gray-600 focus:ring-4 focus:ring-blue-300 shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+              disabled
+            >
+              Checkout
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/script/keranjang.js"></script>
+  </body>
+</html>

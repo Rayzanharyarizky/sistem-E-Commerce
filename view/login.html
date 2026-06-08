@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="/src/output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-gray-800 min-h-screen flex items-center justify-center p-4"
+  >
+    <form
+      id="loginForm"
+      class="max-w-sm w-full mx-auto bg-neutral-primary border border-default rounded-base p-6 shadow"
+      action="#"
+    >
+      <div class="mb-5">
+        <label
+          for="username"
+          class="block mb-2.5 text-sm font-medium text-heading"
+          >Username</label
+        >
+        <input
+          type="text"
+          id="username"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body"
+          placeholder="Masukkan username"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="password"
+          class="block mb-2.5 text-sm font-medium text-heading"
+          >Password</label
+        >
+        <input
+          type="password"
+          id="password"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body"
+          placeholder="••••••••"
+          required
+        />
+      </div>
+      <div class="flex items-start mb-5">
+        <label for="remember-alternative" class="flex items-center h-5">
+          <input
+            id="remember-alternative"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft"
+            required
+          />
+          <p class="ms-2 text-sm font-medium text-heading select-none">
+            I agree with the
+            <a href="#" class="text-fg-brand hover:underline"
+              >terms and conditions</a
+            >.
+          </p>
+        </label>
+      </div>
+      <button
+        type="submit"
+        class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+      >
+        Masuk
+      </button>
+      <p id="hasil" class="mt-4 text-center text-sm text-body"></p>
+      <p class="mt-3 text-center text-sm text-body">
+        Belum punya akun?
+        <a href="./register.html" class="text-fg-brand hover:underline"
+          >Daftar</a
+        >
+      </p>
+    </form>
+    <script src="/script/login.js"></script>
+  </body>
+</html>

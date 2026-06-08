@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link href="/src/output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-neutral-primary min-h-screen flex items-center justify-center p-4"
+  >
+    <form
+      id="registerForm"
+      class="max-w-sm w-full mx-auto bg-neutral-primary border border-default rounded-base p-6 shadow"
+      action="#"
+    >
+      <div class="mb-4">
+        <label for="nama" class="block mb-2.5 text-sm font-medium text-heading"
+          >Nama</label
+        >
+        <input
+          type="text"
+          id="nama"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body"
+          placeholder="Nama lengkap"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label
+          for="username"
+          class="block mb-2.5 text-sm font-medium text-heading"
+          >Username</label
+        >
+        <input
+          type="text"
+          id="username"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body"
+          placeholder="Pilih username"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label
+          for="password"
+          class="block mb-2.5 text-sm font-medium text-heading"
+          > Masukan Password</label
+        >
+        <input
+          type="password"
+          id="password"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body"
+          placeholder="Minimal 6 karakter"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label
+          for="password2"
+          class="block mb-2.5 text-sm font-medium text-heading"
+          >Konfirmasi Password</label
+        >
+        <input
+          type="password"
+          id="password2"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body"
+          placeholder="Ulangi password"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+      >
+        Daftar
+      </button>
+      <p id="registerHasil" class="mt-4 text-center text-sm text-body"></p>
+        <a href="./login.html" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+            Kembali</a>
+      </p>
+    </form>
+    <script src="/script/register.js"></script>
+  </body>
+</html>
