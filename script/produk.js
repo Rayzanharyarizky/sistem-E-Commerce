@@ -13,7 +13,7 @@ const accountButton = document.getElementById("account-button");
 const dropdownAvatar = document.getElementById("dropdownAvatarName");
 const accountNameElem = document.getElementById("account-name");
 const accountAvatarImg = document.getElementById("account-avatar");
-let motorcycles = [];
+let Produk = [];
 
 function isLoggedIn() {
   const nama = sessionStorage.getItem("nama");
