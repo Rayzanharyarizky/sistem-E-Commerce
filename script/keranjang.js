@@ -1,4 +1,4 @@
-const CART_KEY = "Prodduk_cart";
+const CART_KEY = "produk_cart";
 const USD_TO_IDR = 16000;
 const cartItemsContainer = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");

@@ -1,5 +1,5 @@
 const api = "https://fakestoreapi.com/products";
-const CART_KEY = "Produk_cart";
+const CART_KEY = "produk_cart";
 const USD_TO_IDR = 16000;
 const container = document.getElementById("container");
 const popularContainer = document.getElementById("popular");
@@ -13,7 +13,7 @@ const accountButton = document.getElementById("account-button");
 const dropdownAvatar = document.getElementById("dropdownAvatarName");
 const accountNameElem = document.getElementById("account-name");
 const accountAvatarImg = document.getElementById("account-avatar");
-let Produk = [];
+let produk = [];
 
 function isLoggedIn() {
   const nama = sessionStorage.getItem("nama");
@@ -63,9 +63,7 @@ function addToCart(productId) {
     return;
   }
 
-  const product = motorcycles.find(
-    (item) => Number(item.id) === Number(productId),
-  );
+  const product = produk.find((item) => Number(item.id) === Number(productId));
   if (!product) return;
 
   const cart = readCart();
@@ -201,7 +199,7 @@ function renderPopular(products) {
 
 function filterProducts(keyword) {
   const normalizedKeyword = keyword.trim().toLowerCase();
-  const filtered = motorcycles.filter((product) => {
+  const filtered = produk.filter((product) => {
     const title = String(product.title || "").toLowerCase();
     const brand = String(product.brand || "").toLowerCase();
     const description = String(product.description || "").toLowerCase();
@@ -246,7 +244,7 @@ fetch(api)
         ? data.products
         : [];
 
-    motorcycles = productsArray.map((item) => ({
+    produk = productsArray.map((item) => ({
       id: item.id,
       title: item.title || item.name || "-",
       price: item.price || 0,
@@ -258,8 +256,8 @@ fetch(api)
       brand: item.category || item.brand || "-",
     }));
 
-    renderProducts(motorcycles);
-    renderPopular(motorcycles);
+    renderProducts(produk);
+    renderPopular(produk);
   })
   .catch((error) => {
     if (!container) return;

@@ -1,4 +1,4 @@
-const CART_KEY = "motorcycle_cart";
+const CART_KEY = "produk_cart";
 const USD_TO_IDR = 16000;
 const detailContainer = document.getElementById("detail-container");
 const cartLink = document.getElementById("cart-link");
