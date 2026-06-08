@@ -27,7 +27,6 @@ function memuatUser() {
       const parsed = JSON.parse(raw);
       User = Array.isArray(parsed) ? parsed : [];
     } else {
-      // Default account jika belum ada data
       User = [{ nama: "Pelanggan", username: "admin", password: "12345" }];
       localStorage.setItem("Dataakun", JSON.stringify(User));
     }

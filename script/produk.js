@@ -1,5 +1,5 @@
 const api = "https://fakestoreapi.com/products";
-const CART_KEY = "motorcycle_cart";
+const CART_KEY = "Produk_cart";
 const USD_TO_IDR = 16000;
 const container = document.getElementById("container");
 const popularContainer = document.getElementById("popular");
@@ -122,7 +122,7 @@ function renderProducts(products, keyword = "") {
       "bg-neutral-secondary-medium border border-default rounded-base p-6";
     container.innerHTML = keyword
       ? `<p class="text-body">Produk dengan kata kunci "<strong>${keyword}</strong>" tidak ditemukan.</p>`
-      : "<p class='text-body'>Data motor tidak ditemukan.</p>";
+      : "<p class='text-body'>Data PRoduk tidak di temukan</p>";
     return;
   }
 
