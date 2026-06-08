@@ -56,7 +56,10 @@ function updateCartLinkCount() {
 function addToCart(productId) {
   if (!isLoggedIn()) {
     alert("Harap login dulu.");
-    window.location.href = "./login.html";
+    const prefix = window.location.pathname.includes("/view/")
+      ? "./"
+      : "./view/";
+    window.location.href = prefix + "login.html";
     return;
   }
 
@@ -142,7 +145,8 @@ function renderProducts(products, keyword = "") {
               <p class="mb-5 text-sm text-body">Brand: ${element.brand || "-"} | Harga: ${formatRupiahFromUsd(element.price)}</p>
             </div>
             <div class="flex flex-wrap gap-2">
-              <a href="/view/Detail.html?id=${element.id}" class="inline-flex items-center w-auto text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+              <a href="${window.location.pathname.includes("/view/") ? "./Detail.html" : "./view/Detail.html"}?id=${element.id}" 
+                 class="inline-flex items-center w-auto text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
                 Detail Produk
                 <svg class="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
               </a>
@@ -177,7 +181,8 @@ function renderPopular(products) {
             <p class="text-sm text-body font-semibold">${formatRupiahFromUsd(p.price)}</p>
           </div>
           <div class="flex gap-2 mt-3">
-            <a href="/view/Detail.html?id=${p.id}" class="inline-flex items-center w-auto text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+            <a href="${window.location.pathname.includes("/view/") ? "./Detail.html" : "./view/Detail.html"}?id=${p.id}" 
+               class="inline-flex items-center w-auto text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
                 Detail Produk
                 <svg class="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
               </a>
